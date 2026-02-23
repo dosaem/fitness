@@ -1,0 +1,24 @@
+version: '3.8'
+
+# ============================================
+# Deploy Webhook Server for Fitness
+# Runs on Synology NAS
+# ============================================
+
+services:
+  webhook:
+    build: .
+    container_name: fitness-deploy
+    restart: unless-stopped
+    environment:
+      - DEPLOY_TOKEN=${DEPLOY_TOKEN:-your-secret-token}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /volume1/docker/fitness:/volume1/docker/fitness
+    ports:
+      - "9003:9000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
