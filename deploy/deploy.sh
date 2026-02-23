@@ -42,7 +42,7 @@ log "Waiting for containers to be healthy..."
 sleep 60
 
 # Health check with retries
-HEALTH_URL="http://localhost:8086/api/health"
+HEALTH_URL="http://localhost:8087/api/health"
 
 for i in {1..5}; do
     HEALTH_RESPONSE=$(curl -s "$HEALTH_URL")

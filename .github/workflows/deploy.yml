@@ -48,6 +48,7 @@ jobs:
       - name: Health check
         run: |
           url="https://fitness.dosaem.com/api/health"
+          # Local port: 8087
           echo "Checking $url"
 
           for i in {1..5}; do
