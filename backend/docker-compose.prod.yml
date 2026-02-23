@@ -1,0 +1,64 @@
+version: '3.8'
+
+# ============================================
+# PROD 환경 - Synology NAS Docker
+# API: https://fitness.dosaem.com
+# ============================================
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: fitness-db-prod
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: fitness_prod
+      POSTGRES_USER: fitness
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-fitness123}
+    volumes:
+      - ./data/prod/db:/var/lib/postgresql/data
+    ports:
+      - "5440:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U fitness -d fitness_prod"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build: .
+    container_name: fitness-backend-prod
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_NAME=fitness_prod
+      - DB_USERNAME=fitness
+      - DB_PASSWORD=${DB_PASSWORD}
+      - JWT_SECRET=${JWT_SECRET}
+    ports:
+      - "8086:8080"
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost:8080/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  frontend:
+    build: ../frontend
+    container_name: fitness-frontend-prod
+    restart: unless-stopped
+    depends_on:
+      - backend
+    environment:
+      - NEXT_PUBLIC_API_URL=https://fitness.dosaem.com
+    ports:
+      - "3002:3000"
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost:3000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
