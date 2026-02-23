@@ -53,8 +53,6 @@ services:
     restart: unless-stopped
     depends_on:
       - backend
-    environment:
-      - NEXT_PUBLIC_API_URL=https://fitness.dosaem.com
     ports:
       - "3002:3000"
     healthcheck:
