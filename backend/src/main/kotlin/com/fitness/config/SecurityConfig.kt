@@ -30,6 +30,10 @@ class SecurityConfig(
                 auth
                     .requestMatchers("/api/auth/**").permitAll()
                     .requestMatchers("/api/health").permitAll()
+                    // Public read-only endpoints
+                    .requestMatchers(org.springframework.http.HttpMethod.GET, "/api/exercises/**").permitAll()
+                    .requestMatchers(org.springframework.http.HttpMethod.GET, "/api/muscle-groups/**").permitAll()
+                    .requestMatchers(org.springframework.http.HttpMethod.GET, "/api/equipment/**").permitAll()
                     // Swagger UI
                     .requestMatchers("/swagger-ui/**", "/swagger-ui.html").permitAll()
                     .requestMatchers("/v3/api-docs/**", "/v3/api-docs.yaml").permitAll()
