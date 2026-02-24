@@ -14,7 +14,7 @@ import java.math.BigDecimal
 class DataSeeder {
 
     @Bean
-    @Profile("local", "dev")
+    @Profile("local", "dev", "prod")
     fun seedData(
         muscleGroupRepository: MuscleGroupRepository,
         equipmentRepository: EquipmentRepository,
