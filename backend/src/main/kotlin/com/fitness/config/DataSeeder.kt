@@ -78,7 +78,7 @@ class DataSeeder {
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.INTERMEDIATE,
                 caloriesPerMinute = BigDecimal("8.0"),
-                primaryImageUrl = "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400"
+                primaryImageUrl = "https://wger.de/media/exercise-images/192/Bench-press-1.png"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["chest"], mgMap["triceps"]))
                 this.equipment.addAll(listOfNotNull(eqMap["barbell"]))
@@ -92,7 +92,7 @@ class DataSeeder {
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.BEGINNER,
                 caloriesPerMinute = BigDecimal("7.0"),
-                primaryImageUrl = "https://images.unsplash.com/photo-1598971639058-fab3c3109a00?w=400"
+                primaryImageUrl = "https://wger.de/media/exercise-images/4/Push-ups-1.png"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["chest"], mgMap["triceps"], mgMap["shoulders"]))
                 this.equipment.addAll(listOfNotNull(eqMap["bodyweight"]))
@@ -106,7 +106,7 @@ class DataSeeder {
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.INTERMEDIATE,
                 caloriesPerMinute = BigDecimal("6.0"),
-                primaryImageUrl = "https://images.unsplash.com/photo-1534368270820-9de3d8053204?w=400"
+                primaryImageUrl = "https://wger.de/media/exercise-images/145/Dumbbell-flyes-1.png"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["chest"]))
                 this.equipment.addAll(listOfNotNull(eqMap["dumbbell"]))
@@ -121,7 +121,7 @@ class DataSeeder {
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.INTERMEDIATE,
                 caloriesPerMinute = BigDecimal("8.0"),
-                primaryImageUrl = "https://images.unsplash.com/photo-1598266663439-2056e6900339?w=400"
+                primaryImageUrl = "https://wger.de/media/exercise-images/107/Pull-ups-1.png"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["back"], mgMap["biceps"]))
                 this.equipment.addAll(listOfNotNull(eqMap["pull_up_bar"]))
@@ -135,7 +135,7 @@ class DataSeeder {
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.BEGINNER,
                 caloriesPerMinute = BigDecimal("6.0"),
-                primaryImageUrl = "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400"
+                primaryImageUrl = "https://wger.de/media/exercise-images/212/Lat-pull-down-1.png"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["back"], mgMap["biceps"]))
                 this.equipment.addAll(listOfNotNull(eqMap["lat_pulldown"]))
@@ -149,7 +149,7 @@ class DataSeeder {
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.INTERMEDIATE,
                 caloriesPerMinute = BigDecimal("7.0"),
-                primaryImageUrl = "https://images.unsplash.com/photo-1603287681836-b174ce5074c2?w=400"
+                primaryImageUrl = "https://wger.de/media/exercise-images/412/Barbell-bent-over-row-1.png"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["back"], mgMap["biceps"]))
                 this.equipment.addAll(listOfNotNull(eqMap["barbell"]))
@@ -164,7 +164,7 @@ class DataSeeder {
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.INTERMEDIATE,
                 caloriesPerMinute = BigDecimal("6.0"),
-                primaryImageUrl = "https://images.unsplash.com/photo-1532029837206-abbe2b7620e3?w=400"
+                primaryImageUrl = "https://wger.de/media/exercise-images/123/Dumbbell-shoulder-press-1.png"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["shoulders"], mgMap["triceps"]))
                 this.equipment.addAll(listOfNotNull(eqMap["dumbbell"]))
@@ -178,7 +178,7 @@ class DataSeeder {
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.BEGINNER,
                 caloriesPerMinute = BigDecimal("5.0"),
-                primaryImageUrl = "https://images.unsplash.com/photo-1581009146145-b5ef050c149a?w=400"
+                primaryImageUrl = "https://wger.de/media/exercise-images/148/Dumbbell-lateral-raise-1.png"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["shoulders"]))
                 this.equipment.addAll(listOfNotNull(eqMap["dumbbell"]))
@@ -193,7 +193,7 @@ class DataSeeder {
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.BEGINNER,
                 caloriesPerMinute = BigDecimal("8.0"),
-                primaryImageUrl = "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=400"
+                primaryImageUrl = "https://wger.de/media/exercise-images/111/Squat-1.png"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["quadriceps"], mgMap["glutes"], mgMap["hamstrings"]))
                 this.equipment.addAll(listOfNotNull(eqMap["bodyweight"]))
@@ -207,7 +207,7 @@ class DataSeeder {
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.INTERMEDIATE,
                 caloriesPerMinute = BigDecimal("10.0"),
-                primaryImageUrl = "https://images.unsplash.com/photo-1566241142559-40e1dab266c6?w=400"
+                primaryImageUrl = "https://wger.de/media/exercise-images/191/Barbell-squat-1.png"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["quadriceps"], mgMap["glutes"], mgMap["hamstrings"]))
                 this.equipment.addAll(listOfNotNull(eqMap["barbell"]))
@@ -221,7 +221,7 @@ class DataSeeder {
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.BEGINNER,
                 caloriesPerMinute = BigDecimal("7.0"),
-                primaryImageUrl = "https://images.unsplash.com/photo-1623874514711-0f321325f318?w=400"
+                primaryImageUrl = "https://wger.de/media/exercise-images/405/Leg-press-1.png"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["quadriceps"], mgMap["glutes"]))
                 this.equipment.addAll(listOfNotNull(eqMap["leg_press"]))
@@ -235,7 +235,7 @@ class DataSeeder {
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.BEGINNER,
                 caloriesPerMinute = BigDecimal("7.0"),
-                primaryImageUrl = "https://images.unsplash.com/photo-1434608519344-49d77a699e1d?w=400"
+                primaryImageUrl = "https://wger.de/media/exercise-images/112/Lunges-1.png"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["quadriceps"], mgMap["glutes"], mgMap["hamstrings"]))
                 this.equipment.addAll(listOfNotNull(eqMap["bodyweight"]))
@@ -249,7 +249,7 @@ class DataSeeder {
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.ADVANCED,
                 caloriesPerMinute = BigDecimal("10.0"),
-                primaryImageUrl = "https://images.unsplash.com/photo-1517963879433-6ad2b056d712?w=400"
+                primaryImageUrl = "https://wger.de/media/exercise-images/105/Deadlift-1.png"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["hamstrings"], mgMap["glutes"], mgMap["back"], mgMap["lower_back"]))
                 this.equipment.addAll(listOfNotNull(eqMap["barbell"]))
@@ -263,7 +263,7 @@ class DataSeeder {
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.BEGINNER,
                 caloriesPerMinute = BigDecimal("4.0"),
-                primaryImageUrl = "https://images.unsplash.com/photo-1605296867424-35fc25c9212a?w=400"
+                primaryImageUrl = "https://wger.de/media/exercise-images/104/Calf-raises-1.png"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["calves"]))
                 this.equipment.addAll(listOfNotNull(eqMap["bodyweight"]))
@@ -278,7 +278,7 @@ class DataSeeder {
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.BEGINNER,
                 caloriesPerMinute = BigDecimal("5.0"),
-                primaryImageUrl = "https://images.unsplash.com/photo-1581009137042-c552e485697a?w=400"
+                primaryImageUrl = "https://wger.de/media/exercise-images/81/Bicep-curl-1.png"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["biceps"]))
                 this.equipment.addAll(listOfNotNull(eqMap["dumbbell"]))
@@ -292,7 +292,7 @@ class DataSeeder {
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.BEGINNER,
                 caloriesPerMinute = BigDecimal("5.0"),
-                primaryImageUrl = "https://images.unsplash.com/photo-1530822847156-5df684ec5ee1?w=400"
+                primaryImageUrl = "https://wger.de/media/exercise-images/344/Overhead-triceps-extension-1.png"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["triceps"]))
                 this.equipment.addAll(listOfNotNull(eqMap["dumbbell"]))
@@ -306,7 +306,7 @@ class DataSeeder {
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.INTERMEDIATE,
                 caloriesPerMinute = BigDecimal("6.0"),
-                primaryImageUrl = "https://images.unsplash.com/photo-1597452485669-2c7bb5fef90d?w=400"
+                primaryImageUrl = "https://wger.de/media/exercise-images/83/Bench-dips-1.png"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["triceps"], mgMap["chest"]))
                 this.equipment.addAll(listOfNotNull(eqMap["bodyweight"]))
@@ -321,7 +321,7 @@ class DataSeeder {
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.BEGINNER,
                 caloriesPerMinute = BigDecimal("4.0"),
-                primaryImageUrl = "https://images.unsplash.com/photo-1566241142559-40e1dab266c6?w=400"
+                primaryImageUrl = "https://wger.de/media/exercise-images/238/Plank-1.png"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["abs"], mgMap["obliques"], mgMap["lower_back"]))
                 this.equipment.addAll(listOfNotNull(eqMap["exercise_mat"]))
@@ -335,7 +335,7 @@ class DataSeeder {
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.BEGINNER,
                 caloriesPerMinute = BigDecimal("5.0"),
-                primaryImageUrl = "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400"
+                primaryImageUrl = "https://wger.de/media/exercise-images/91/Crunches-1.png"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["abs"]))
                 this.equipment.addAll(listOfNotNull(eqMap["exercise_mat"]))
@@ -349,7 +349,7 @@ class DataSeeder {
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.INTERMEDIATE,
                 caloriesPerMinute = BigDecimal("5.0"),
-                primaryImageUrl = "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400"
+                primaryImageUrl = "https://wger.de/media/exercise-images/126/Lying-leg-raise-1.png"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["abs"], mgMap["hip_flexors"]))
                 this.equipment.addAll(listOfNotNull(eqMap["exercise_mat"]))
@@ -363,7 +363,7 @@ class DataSeeder {
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.INTERMEDIATE,
                 caloriesPerMinute = BigDecimal("6.0"),
-                primaryImageUrl = "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400"
+                primaryImageUrl = "https://wger.de/media/exercise-images/345/Russian-twist-1.png"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["obliques"], mgMap["abs"]))
                 this.equipment.addAll(listOfNotNull(eqMap["exercise_mat"]))
@@ -378,7 +378,7 @@ class DataSeeder {
                 category = ExerciseCategory.CARDIO,
                 difficulty = Difficulty.BEGINNER,
                 caloriesPerMinute = BigDecimal("10.0"),
-                primaryImageUrl = "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=400"
+                primaryImageUrl = "https://wger.de/media/exercise-images/326/Running-treadmill-1.png"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["quadriceps"], mgMap["calves"]))
                 this.equipment.addAll(listOfNotNull(eqMap["treadmill"]))
@@ -392,7 +392,7 @@ class DataSeeder {
                 category = ExerciseCategory.CARDIO,
                 difficulty = Difficulty.BEGINNER,
                 caloriesPerMinute = BigDecimal("8.0"),
-                primaryImageUrl = "https://images.unsplash.com/photo-1517649763962-0c623066013b?w=400"
+                primaryImageUrl = "https://wger.de/media/exercise-images/327/Stationary-bike-1.png"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["quadriceps"], mgMap["calves"]))
                 this.equipment.addAll(listOfNotNull(eqMap["stationary_bike"]))
@@ -406,7 +406,7 @@ class DataSeeder {
                 category = ExerciseCategory.CARDIO,
                 difficulty = Difficulty.INTERMEDIATE,
                 caloriesPerMinute = BigDecimal("9.0"),
-                primaryImageUrl = "https://images.unsplash.com/photo-1519505907962-0a6cb0167c73?w=400"
+                primaryImageUrl = "https://wger.de/media/exercise-images/328/Rowing-machine-1.png"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["back"], mgMap["quadriceps"]))
                 this.equipment.addAll(listOfNotNull(eqMap["rowing_machine"]))
@@ -420,7 +420,7 @@ class DataSeeder {
                 category = ExerciseCategory.CARDIO,
                 difficulty = Difficulty.BEGINNER,
                 caloriesPerMinute = BigDecimal("8.0"),
-                primaryImageUrl = "https://images.unsplash.com/photo-1601422407692-ec4eeec1d9b3?w=400"
+                primaryImageUrl = "https://wger.de/media/exercise-images/329/Jumping-jacks-1.png"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["quadriceps"], mgMap["calves"]))
                 this.equipment.addAll(listOfNotNull(eqMap["bodyweight"]))
@@ -434,7 +434,7 @@ class DataSeeder {
                 category = ExerciseCategory.CARDIO,
                 difficulty = Difficulty.ADVANCED,
                 caloriesPerMinute = BigDecimal("12.0"),
-                primaryImageUrl = "https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=400"
+                primaryImageUrl = "https://wger.de/media/exercise-images/354/Burpees-1.png"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["quadriceps"], mgMap["chest"], mgMap["abs"]))
                 this.equipment.addAll(listOfNotNull(eqMap["bodyweight"]))
@@ -448,7 +448,7 @@ class DataSeeder {
                 category = ExerciseCategory.CARDIO,
                 difficulty = Difficulty.INTERMEDIATE,
                 caloriesPerMinute = BigDecimal("10.0"),
-                primaryImageUrl = "https://images.unsplash.com/photo-1434682881908-b43d0467b798?w=400"
+                primaryImageUrl = "https://wger.de/media/exercise-images/330/Mountain-climbers-1.png"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["abs"], mgMap["quadriceps"]))
                 this.equipment.addAll(listOfNotNull(eqMap["exercise_mat"]))
@@ -463,7 +463,7 @@ class DataSeeder {
                 category = ExerciseCategory.FLEXIBILITY,
                 difficulty = Difficulty.BEGINNER,
                 caloriesPerMinute = BigDecimal("3.0"),
-                primaryImageUrl = "https://images.unsplash.com/photo-1566241142559-40e1dab266c6?w=400"
+                primaryImageUrl = "https://wger.de/media/exercise-images/331/Stretching-1.png"
             ).apply {
                 this.equipment.addAll(listOfNotNull(eqMap["exercise_mat"]))
             })
@@ -476,7 +476,7 @@ class DataSeeder {
                 category = ExerciseCategory.FLEXIBILITY,
                 difficulty = Difficulty.INTERMEDIATE,
                 caloriesPerMinute = BigDecimal("4.0"),
-                primaryImageUrl = "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400"
+                primaryImageUrl = "https://wger.de/media/exercise-images/332/Yoga-1.png"
             ).apply {
                 this.equipment.addAll(listOfNotNull(eqMap["exercise_mat"]))
             })
@@ -489,7 +489,7 @@ class DataSeeder {
                 category = ExerciseCategory.FLEXIBILITY,
                 difficulty = Difficulty.BEGINNER,
                 caloriesPerMinute = BigDecimal("2.0"),
-                primaryImageUrl = "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400"
+                primaryImageUrl = "https://wger.de/media/exercise-images/333/Foam-rolling-1.png"
             ).apply {
                 this.equipment.addAll(listOfNotNull(eqMap["foam_roller"]))
             })
