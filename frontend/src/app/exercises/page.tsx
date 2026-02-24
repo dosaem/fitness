@@ -3,7 +3,8 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import Link from "next/link";
-import { Search, Filter } from "lucide-react";
+import Image from "next/image";
+import { Search, Dumbbell } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -141,14 +142,29 @@ export default function ExercisesPage() {
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {exercisesData?.content.map((exercise) => (
               <Link key={exercise.id} href={`/exercises/${exercise.id}`}>
-                <Card className="hover:shadow-md transition-shadow cursor-pointer h-full">
-                  <CardHeader className="pb-2">
-                    <div className="flex items-start justify-between">
-                      <CardTitle className="text-lg">{exercise.nameKo}</CardTitle>
+                <Card className="hover:shadow-md transition-shadow cursor-pointer h-full overflow-hidden">
+                  <div className="relative h-48 bg-muted">
+                    {exercise.primaryImageUrl ? (
+                      <Image
+                        src={exercise.primaryImageUrl}
+                        alt={exercise.nameKo}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      />
+                    ) : (
+                      <div className="flex items-center justify-center h-full">
+                        <Dumbbell className="h-12 w-12 text-muted-foreground/50" />
+                      </div>
+                    )}
+                    <div className="absolute top-2 right-2">
                       <Badge variant={getCategoryBadgeVariant(exercise.category)}>
                         {getCategoryLabel(exercise.category)}
                       </Badge>
                     </div>
+                  </div>
+                  <CardHeader className="pb-2">
+                    <CardTitle className="text-lg">{exercise.nameKo}</CardTitle>
                     <CardDescription>{exercise.name}</CardDescription>
                   </CardHeader>
                   <CardContent>

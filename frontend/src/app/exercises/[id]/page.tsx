@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import Image from "next/image";
 import { ArrowLeft, Plus, Dumbbell, Clock, Flame } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -86,7 +87,19 @@ export default function ExerciseDetailPage() {
 
       <div className="grid gap-6 lg:grid-cols-3">
         <div className="lg:col-span-2 space-y-6">
-          <Card>
+          <Card className="overflow-hidden">
+            {exercise.primaryImageUrl && (
+              <div className="relative h-64 md:h-80 bg-muted">
+                <Image
+                  src={exercise.primaryImageUrl}
+                  alt={exercise.nameKo}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 66vw"
+                  priority
+                />
+              </div>
+            )}
             <CardHeader>
               <div className="flex items-start justify-between">
                 <div>

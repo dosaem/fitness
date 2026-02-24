@@ -77,7 +77,8 @@ class DataSeeder {
                 instructions = "1. 벤치에 눕고 바벨을 어깨너비보다 넓게 잡습니다.\n2. 가슴 위로 바벨을 내렸다가 밀어 올립니다.",
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.INTERMEDIATE,
-                caloriesPerMinute = BigDecimal("8.0")
+                caloriesPerMinute = BigDecimal("8.0"),
+                primaryImageUrl = "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["chest"], mgMap["triceps"]))
                 this.equipment.addAll(listOfNotNull(eqMap["barbell"]))
@@ -90,7 +91,8 @@ class DataSeeder {
                 instructions = "1. 양손을 어깨너비로 벌리고 바닥에 짚습니다.\n2. 몸을 일직선으로 유지하며 팔꿈치를 굽혀 내려갑니다.\n3. 팔을 펴며 올라옵니다.",
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.BEGINNER,
-                caloriesPerMinute = BigDecimal("7.0")
+                caloriesPerMinute = BigDecimal("7.0"),
+                primaryImageUrl = "https://images.unsplash.com/photo-1598971639058-fab3c3109a00?w=400"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["chest"], mgMap["triceps"], mgMap["shoulders"]))
                 this.equipment.addAll(listOfNotNull(eqMap["bodyweight"]))
@@ -103,7 +105,8 @@ class DataSeeder {
                 instructions = "1. 벤치에 누워 덤벨을 양손에 듭니다.\n2. 팔을 옆으로 벌리며 내립니다.\n3. 가슴을 조이며 덤벨을 모읍니다.",
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.INTERMEDIATE,
-                caloriesPerMinute = BigDecimal("6.0")
+                caloriesPerMinute = BigDecimal("6.0"),
+                primaryImageUrl = "https://images.unsplash.com/photo-1534368270820-9de3d8053204?w=400"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["chest"]))
                 this.equipment.addAll(listOfNotNull(eqMap["dumbbell"]))
@@ -117,7 +120,8 @@ class DataSeeder {
                 instructions = "1. 바를 어깨너비보다 넓게 잡습니다.\n2. 팔을 당겨 턱이 바 위로 올라가도록 합니다.\n3. 천천히 내려옵니다.",
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.INTERMEDIATE,
-                caloriesPerMinute = BigDecimal("8.0")
+                caloriesPerMinute = BigDecimal("8.0"),
+                primaryImageUrl = "https://images.unsplash.com/photo-1598266663439-2056e6900339?w=400"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["back"], mgMap["biceps"]))
                 this.equipment.addAll(listOfNotNull(eqMap["pull_up_bar"]))
@@ -130,7 +134,8 @@ class DataSeeder {
                 instructions = "1. 바를 어깨너비보다 넓게 잡습니다.\n2. 바를 가슴 위쪽으로 당깁니다.\n3. 천천히 원위치합니다.",
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.BEGINNER,
-                caloriesPerMinute = BigDecimal("6.0")
+                caloriesPerMinute = BigDecimal("6.0"),
+                primaryImageUrl = "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["back"], mgMap["biceps"]))
                 this.equipment.addAll(listOfNotNull(eqMap["lat_pulldown"]))
@@ -143,7 +148,8 @@ class DataSeeder {
                 instructions = "1. 바벨을 잡고 상체를 앞으로 숙입니다.\n2. 바벨을 배꼽 쪽으로 당깁니다.\n3. 천천히 내립니다.",
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.INTERMEDIATE,
-                caloriesPerMinute = BigDecimal("7.0")
+                caloriesPerMinute = BigDecimal("7.0"),
+                primaryImageUrl = "https://images.unsplash.com/photo-1603287681836-b174ce5074c2?w=400"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["back"], mgMap["biceps"]))
                 this.equipment.addAll(listOfNotNull(eqMap["barbell"]))
@@ -157,7 +163,8 @@ class DataSeeder {
                 instructions = "1. 덤벨을 어깨 높이에 듭니다.\n2. 머리 위로 밀어 올립니다.\n3. 천천히 내립니다.",
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.INTERMEDIATE,
-                caloriesPerMinute = BigDecimal("6.0")
+                caloriesPerMinute = BigDecimal("6.0"),
+                primaryImageUrl = "https://images.unsplash.com/photo-1532029837206-abbe2b7620e3?w=400"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["shoulders"], mgMap["triceps"]))
                 this.equipment.addAll(listOfNotNull(eqMap["dumbbell"]))
@@ -170,7 +177,8 @@ class DataSeeder {
                 instructions = "1. 덤벨을 양손에 들고 섭니다.\n2. 팔을 옆으로 들어 올립니다.\n3. 천천히 내립니다.",
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.BEGINNER,
-                caloriesPerMinute = BigDecimal("5.0")
+                caloriesPerMinute = BigDecimal("5.0"),
+                primaryImageUrl = "https://images.unsplash.com/photo-1581009146145-b5ef050c149a?w=400"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["shoulders"]))
                 this.equipment.addAll(listOfNotNull(eqMap["dumbbell"]))
@@ -184,7 +192,8 @@ class DataSeeder {
                 instructions = "1. 발을 어깨너비로 벌리고 섭니다.\n2. 엉덩이를 뒤로 빼며 앉습니다.\n3. 허벅지가 바닥과 평행이 되면 일어납니다.",
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.BEGINNER,
-                caloriesPerMinute = BigDecimal("8.0")
+                caloriesPerMinute = BigDecimal("8.0"),
+                primaryImageUrl = "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=400"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["quadriceps"], mgMap["glutes"], mgMap["hamstrings"]))
                 this.equipment.addAll(listOfNotNull(eqMap["bodyweight"]))
@@ -197,7 +206,8 @@ class DataSeeder {
                 instructions = "1. 바벨을 등 위에 올립니다.\n2. 엉덩이를 뒤로 빼며 앉습니다.\n3. 허벅지가 바닥과 평행이 되면 일어납니다.",
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.INTERMEDIATE,
-                caloriesPerMinute = BigDecimal("10.0")
+                caloriesPerMinute = BigDecimal("10.0"),
+                primaryImageUrl = "https://images.unsplash.com/photo-1566241142559-40e1dab266c6?w=400"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["quadriceps"], mgMap["glutes"], mgMap["hamstrings"]))
                 this.equipment.addAll(listOfNotNull(eqMap["barbell"]))
@@ -210,7 +220,8 @@ class DataSeeder {
                 instructions = "1. 머신에 앉아 발판에 발을 올립니다.\n2. 무릎을 펴며 발판을 밀어냅니다.\n3. 천천히 굽힙니다.",
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.BEGINNER,
-                caloriesPerMinute = BigDecimal("7.0")
+                caloriesPerMinute = BigDecimal("7.0"),
+                primaryImageUrl = "https://images.unsplash.com/photo-1623874514711-0f321325f318?w=400"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["quadriceps"], mgMap["glutes"]))
                 this.equipment.addAll(listOfNotNull(eqMap["leg_press"]))
@@ -223,7 +234,8 @@ class DataSeeder {
                 instructions = "1. 한 발을 앞으로 내딛습니다.\n2. 뒷무릎이 바닥 가까이 올 때까지 내려갑니다.\n3. 앞발로 밀어 일어납니다.",
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.BEGINNER,
-                caloriesPerMinute = BigDecimal("7.0")
+                caloriesPerMinute = BigDecimal("7.0"),
+                primaryImageUrl = "https://images.unsplash.com/photo-1434608519344-49d77a699e1d?w=400"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["quadriceps"], mgMap["glutes"], mgMap["hamstrings"]))
                 this.equipment.addAll(listOfNotNull(eqMap["bodyweight"]))
@@ -236,7 +248,8 @@ class DataSeeder {
                 instructions = "1. 바벨 앞에 서서 바를 잡습니다.\n2. 등을 곧게 펴고 일어납니다.\n3. 천천히 내려놓습니다.",
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.ADVANCED,
-                caloriesPerMinute = BigDecimal("10.0")
+                caloriesPerMinute = BigDecimal("10.0"),
+                primaryImageUrl = "https://images.unsplash.com/photo-1517963879433-6ad2b056d712?w=400"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["hamstrings"], mgMap["glutes"], mgMap["back"], mgMap["lower_back"]))
                 this.equipment.addAll(listOfNotNull(eqMap["barbell"]))
@@ -249,7 +262,8 @@ class DataSeeder {
                 instructions = "1. 발 앞꿈치로 서서 뒤꿈치를 올립니다.\n2. 정점에서 잠시 유지합니다.\n3. 천천히 내립니다.",
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.BEGINNER,
-                caloriesPerMinute = BigDecimal("4.0")
+                caloriesPerMinute = BigDecimal("4.0"),
+                primaryImageUrl = "https://images.unsplash.com/photo-1605296867424-35fc25c9212a?w=400"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["calves"]))
                 this.equipment.addAll(listOfNotNull(eqMap["bodyweight"]))
@@ -263,7 +277,8 @@ class DataSeeder {
                 instructions = "1. 덤벨을 양손에 듭니다.\n2. 팔꿈치를 고정하고 덤벨을 들어올립니다.\n3. 천천히 내립니다.",
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.BEGINNER,
-                caloriesPerMinute = BigDecimal("5.0")
+                caloriesPerMinute = BigDecimal("5.0"),
+                primaryImageUrl = "https://images.unsplash.com/photo-1581009137042-c552e485697a?w=400"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["biceps"]))
                 this.equipment.addAll(listOfNotNull(eqMap["dumbbell"]))
@@ -276,7 +291,8 @@ class DataSeeder {
                 instructions = "1. 덤벨을 머리 위로 듭니다.\n2. 팔꿈치를 고정하고 덤벨을 머리 뒤로 내립니다.\n3. 팔을 펴며 올립니다.",
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.BEGINNER,
-                caloriesPerMinute = BigDecimal("5.0")
+                caloriesPerMinute = BigDecimal("5.0"),
+                primaryImageUrl = "https://images.unsplash.com/photo-1530822847156-5df684ec5ee1?w=400"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["triceps"]))
                 this.equipment.addAll(listOfNotNull(eqMap["dumbbell"]))
@@ -289,7 +305,8 @@ class DataSeeder {
                 instructions = "1. 양손으로 벤치를 잡고 몸을 앞으로 내립니다.\n2. 팔꿈치를 굽혀 몸을 내립니다.\n3. 팔을 펴며 올라옵니다.",
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.INTERMEDIATE,
-                caloriesPerMinute = BigDecimal("6.0")
+                caloriesPerMinute = BigDecimal("6.0"),
+                primaryImageUrl = "https://images.unsplash.com/photo-1597452485669-2c7bb5fef90d?w=400"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["triceps"], mgMap["chest"]))
                 this.equipment.addAll(listOfNotNull(eqMap["bodyweight"]))
@@ -303,7 +320,8 @@ class DataSeeder {
                 instructions = "1. 팔꿈치와 발끝으로 몸을 지탱합니다.\n2. 몸을 일직선으로 유지합니다.\n3. 정해진 시간 동안 버팁니다.",
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.BEGINNER,
-                caloriesPerMinute = BigDecimal("4.0")
+                caloriesPerMinute = BigDecimal("4.0"),
+                primaryImageUrl = "https://images.unsplash.com/photo-1566241142559-40e1dab266c6?w=400"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["abs"], mgMap["obliques"], mgMap["lower_back"]))
                 this.equipment.addAll(listOfNotNull(eqMap["exercise_mat"]))
@@ -316,7 +334,8 @@ class DataSeeder {
                 instructions = "1. 바닥에 누워 무릎을 굽힙니다.\n2. 상체를 들어 올립니다.\n3. 천천히 내립니다.",
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.BEGINNER,
-                caloriesPerMinute = BigDecimal("5.0")
+                caloriesPerMinute = BigDecimal("5.0"),
+                primaryImageUrl = "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["abs"]))
                 this.equipment.addAll(listOfNotNull(eqMap["exercise_mat"]))
@@ -329,7 +348,8 @@ class DataSeeder {
                 instructions = "1. 바닥에 누워 다리를 펴줍니다.\n2. 다리를 들어 올립니다.\n3. 천천히 내립니다.",
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.INTERMEDIATE,
-                caloriesPerMinute = BigDecimal("5.0")
+                caloriesPerMinute = BigDecimal("5.0"),
+                primaryImageUrl = "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["abs"], mgMap["hip_flexors"]))
                 this.equipment.addAll(listOfNotNull(eqMap["exercise_mat"]))
@@ -342,7 +362,8 @@ class DataSeeder {
                 instructions = "1. 바닥에 앉아 상체를 뒤로 기울입니다.\n2. 몸을 좌우로 회전합니다.",
                 category = ExerciseCategory.STRENGTH,
                 difficulty = Difficulty.INTERMEDIATE,
-                caloriesPerMinute = BigDecimal("6.0")
+                caloriesPerMinute = BigDecimal("6.0"),
+                primaryImageUrl = "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["obliques"], mgMap["abs"]))
                 this.equipment.addAll(listOfNotNull(eqMap["exercise_mat"]))
@@ -356,7 +377,8 @@ class DataSeeder {
                 instructions = "1. 적절한 속도로 달립니다.\n2. 호흡을 일정하게 유지합니다.",
                 category = ExerciseCategory.CARDIO,
                 difficulty = Difficulty.BEGINNER,
-                caloriesPerMinute = BigDecimal("10.0")
+                caloriesPerMinute = BigDecimal("10.0"),
+                primaryImageUrl = "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=400"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["quadriceps"], mgMap["calves"]))
                 this.equipment.addAll(listOfNotNull(eqMap["treadmill"]))
@@ -369,7 +391,8 @@ class DataSeeder {
                 instructions = "1. 페달을 밟아 자전거를 굴립니다.\n2. 적절한 저항으로 운동합니다.",
                 category = ExerciseCategory.CARDIO,
                 difficulty = Difficulty.BEGINNER,
-                caloriesPerMinute = BigDecimal("8.0")
+                caloriesPerMinute = BigDecimal("8.0"),
+                primaryImageUrl = "https://images.unsplash.com/photo-1517649763962-0c623066013b?w=400"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["quadriceps"], mgMap["calves"]))
                 this.equipment.addAll(listOfNotNull(eqMap["stationary_bike"]))
@@ -382,7 +405,8 @@ class DataSeeder {
                 instructions = "1. 핸들을 잡고 다리로 밀어냅니다.\n2. 팔로 당기며 마무리합니다.\n3. 역순으로 돌아갑니다.",
                 category = ExerciseCategory.CARDIO,
                 difficulty = Difficulty.INTERMEDIATE,
-                caloriesPerMinute = BigDecimal("9.0")
+                caloriesPerMinute = BigDecimal("9.0"),
+                primaryImageUrl = "https://images.unsplash.com/photo-1519505907962-0a6cb0167c73?w=400"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["back"], mgMap["quadriceps"]))
                 this.equipment.addAll(listOfNotNull(eqMap["rowing_machine"]))
@@ -395,7 +419,8 @@ class DataSeeder {
                 instructions = "1. 점프하며 팔다리를 벌립니다.\n2. 다시 점프하며 모읍니다.",
                 category = ExerciseCategory.CARDIO,
                 difficulty = Difficulty.BEGINNER,
-                caloriesPerMinute = BigDecimal("8.0")
+                caloriesPerMinute = BigDecimal("8.0"),
+                primaryImageUrl = "https://images.unsplash.com/photo-1601422407692-ec4eeec1d9b3?w=400"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["quadriceps"], mgMap["calves"]))
                 this.equipment.addAll(listOfNotNull(eqMap["bodyweight"]))
@@ -408,7 +433,8 @@ class DataSeeder {
                 instructions = "1. 스쿼트 자세로 내려갑니다.\n2. 손을 바닥에 짚고 다리를 뻗어 플랭크 자세로 갑니다.\n3. 푸쉬업을 합니다.\n4. 다리를 당기고 점프합니다.",
                 category = ExerciseCategory.CARDIO,
                 difficulty = Difficulty.ADVANCED,
-                caloriesPerMinute = BigDecimal("12.0")
+                caloriesPerMinute = BigDecimal("12.0"),
+                primaryImageUrl = "https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=400"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["quadriceps"], mgMap["chest"], mgMap["abs"]))
                 this.equipment.addAll(listOfNotNull(eqMap["bodyweight"]))
@@ -421,7 +447,8 @@ class DataSeeder {
                 instructions = "1. 플랭크 자세를 취합니다.\n2. 무릎을 번갈아 가슴 쪽으로 당깁니다.",
                 category = ExerciseCategory.CARDIO,
                 difficulty = Difficulty.INTERMEDIATE,
-                caloriesPerMinute = BigDecimal("10.0")
+                caloriesPerMinute = BigDecimal("10.0"),
+                primaryImageUrl = "https://images.unsplash.com/photo-1434682881908-b43d0467b798?w=400"
             ).apply {
                 this.muscleGroups.addAll(listOfNotNull(mgMap["abs"], mgMap["quadriceps"]))
                 this.equipment.addAll(listOfNotNull(eqMap["exercise_mat"]))
@@ -435,7 +462,8 @@ class DataSeeder {
                 instructions = "1. 각 근육을 15-30초간 늘립니다.\n2. 통증이 없는 범위에서 합니다.",
                 category = ExerciseCategory.FLEXIBILITY,
                 difficulty = Difficulty.BEGINNER,
-                caloriesPerMinute = BigDecimal("3.0")
+                caloriesPerMinute = BigDecimal("3.0"),
+                primaryImageUrl = "https://images.unsplash.com/photo-1566241142559-40e1dab266c6?w=400"
             ).apply {
                 this.equipment.addAll(listOfNotNull(eqMap["exercise_mat"]))
             })
@@ -447,7 +475,8 @@ class DataSeeder {
                 instructions = "1. 다양한 요가 자세를 취합니다.\n2. 호흡과 함께 동작합니다.",
                 category = ExerciseCategory.FLEXIBILITY,
                 difficulty = Difficulty.INTERMEDIATE,
-                caloriesPerMinute = BigDecimal("4.0")
+                caloriesPerMinute = BigDecimal("4.0"),
+                primaryImageUrl = "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400"
             ).apply {
                 this.equipment.addAll(listOfNotNull(eqMap["exercise_mat"]))
             })
@@ -459,7 +488,8 @@ class DataSeeder {
                 instructions = "1. 폼롤러 위에 근육을 올립니다.\n2. 천천히 굴려가며 마사지합니다.",
                 category = ExerciseCategory.FLEXIBILITY,
                 difficulty = Difficulty.BEGINNER,
-                caloriesPerMinute = BigDecimal("2.0")
+                caloriesPerMinute = BigDecimal("2.0"),
+                primaryImageUrl = "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400"
             ).apply {
                 this.equipment.addAll(listOfNotNull(eqMap["foam_roller"]))
             })
