@@ -41,7 +41,7 @@ jobs:
           username: ${{ secrets.NAS_USER }}
           key: ${{ secrets.NAS_SSH_KEY }}
           port: ${{ secrets.NAS_PORT }}
-          command_timeout: 10m
+          command_timeout: 20m
           script: |
             export PATH="/var/packages/ContainerManager/target/usr/bin:/usr/bin:$PATH"
 
@@ -52,7 +52,7 @@ jobs:
 
             cd backend
             docker compose -f docker-compose.prod.yml down
-            docker compose -f docker-compose.prod.yml build --no-cache
+            docker compose -f docker-compose.prod.yml build
             docker compose -f docker-compose.prod.yml up -d
 
             sleep 30
