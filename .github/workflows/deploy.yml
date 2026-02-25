@@ -29,38 +29,42 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger deployment webhook
-        run: |
-          response=$(curl -s -X POST \
-            "${{ secrets.DEPLOY_WEBHOOK_URL }}?env=prod&branch=main&token=${{ secrets.DEPLOY_TOKEN }}")
-          echo "Response: $response"
+      - name: Setup Tailscale
+        uses: tailscale/github-action@v3
+        with:
+          authkey: ${{ secrets.TS_AUTH_KEY }}
 
-          if echo "$response" | grep -q "deploying"; then
-            echo "Deployment triggered successfully!"
-          else
-            echo "Deployment trigger failed"
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.NAS_HOST }}
+          username: ${{ secrets.NAS_USER }}
+          key: ${{ secrets.NAS_SSH_KEY }}
+          port: ${{ secrets.NAS_PORT }}
+          command_timeout: 10m
+          script: |
+            export PATH="/var/packages/ContainerManager/target/usr/bin:/usr/bin:$PATH"
+
+            cd /volume1/docker/fitness
+            git fetch origin --prune
+            git checkout main
+            git reset --hard origin/main
+
+            cd backend
+            docker compose -f docker-compose.prod.yml down
+            docker compose -f docker-compose.prod.yml build --no-cache
+            docker compose -f docker-compose.prod.yml up -d
+
+            sleep 30
+
+            for i in 1 2 3 4 5; do
+              if curl -s http://localhost:8087/api/health | grep -q "ok"; then
+                echo "Health check passed!"
+                exit 0
+              fi
+              echo "Attempt $i failed, retrying in 15s..."
+              sleep 15
+            done
+
+            echo "Health check failed"
             exit 1
-          fi
-
-      - name: Wait for deployment
-        run: sleep 90
-
-      - name: Health check
-        run: |
-          url="https://fitness.dosaem.com/api/health"
-          # Local port: 8087
-          echo "Checking $url"
-
-          for i in {1..5}; do
-            response=$(curl -s "$url")
-            echo "Attempt $i - Response: $response"
-
-            if echo "$response" | grep -q "OK"; then
-              echo "Health check passed!"
-              exit 0
-            fi
-            sleep 15
-          done
-
-          echo "Health check failed after 5 attempts"
-          exit 1
