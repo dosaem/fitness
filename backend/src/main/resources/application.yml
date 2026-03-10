@@ -6,7 +6,7 @@ spring:
     active: ${SPRING_PROFILES_ACTIVE:local}
 
   mail:
-    host: ${MAIL_HOST:smtppro.zoho.com}
+    host: ${MAIL_HOST:smtp.gmail.com}
     port: ${MAIL_PORT:587}
     username: ${MAIL_USERNAME:}
     password: ${MAIL_PASSWORD:}
