@@ -5,6 +5,7 @@ import com.fitness.entity.User
 import com.fitness.repository.UserRepository
 import com.fitness.security.JwtProvider
 import org.springframework.security.crypto.password.PasswordEncoder
+import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 
@@ -15,6 +16,7 @@ class AuthService(
     private val jwtProvider: JwtProvider,
     private val emailService: EmailService
 ) {
+    private val log = LoggerFactory.getLogger(AuthService::class.java)
 
     @Transactional
     fun register(request: RegisterRequest): AuthResponse {
@@ -63,7 +65,7 @@ class AuthService(
                 val token = jwtProvider.generatePasswordResetToken(user.id, user.email)
                 emailService.sendPasswordResetEmail(user.email, token)
             } catch (e: Exception) {
-                // 이메일 발송 실패해도 동일 응답 (보안)
+                log.error("이메일 발송 실패: ${e.message}", e)
             }
         }
         return MessageResponse("비밀번호 재설정 링크가 이메일로 전송되었습니다")
