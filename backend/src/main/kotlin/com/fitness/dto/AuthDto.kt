@@ -38,6 +38,25 @@ data class AuthResponse(
     val user: UserResponse
 )
 
+data class ForgotPasswordRequest(
+    @field:NotBlank(message = "이메일을 입력해주세요")
+    @field:Email(message = "올바른 이메일 형식이 아닙니다")
+    val email: String
+)
+
+data class ResetPasswordRequest(
+    @field:NotBlank(message = "토큰이 필요합니다")
+    val token: String,
+
+    @field:NotBlank(message = "새 비밀번호를 입력해주세요")
+    @field:Size(min = 6, message = "비밀번호는 6자 이상이어야 합니다")
+    val newPassword: String
+)
+
+data class MessageResponse(
+    val message: String
+)
+
 data class UserResponse(
     val id: Long,
     val email: String,

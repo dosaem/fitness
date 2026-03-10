@@ -27,6 +27,19 @@ export interface RegisterRequest {
   nickname: string;
 }
 
+export interface ForgotPasswordRequest {
+  email: string;
+}
+
+export interface ResetPasswordRequest {
+  token: string;
+  newPassword: string;
+}
+
+export interface MessageResponse {
+  message: string;
+}
+
 // Exercise types
 export type ExerciseCategory = 'STRENGTH' | 'CARDIO' | 'FLEXIBILITY';
 export type Difficulty = 'BEGINNER' | 'INTERMEDIATE' | 'ADVANCED';

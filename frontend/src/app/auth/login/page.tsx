@@ -91,6 +91,11 @@ export default function LoginPage() {
               {errors.password && (
                 <p className="text-sm text-red-500">{errors.password.message}</p>
               )}
+              <div className="text-right">
+                <Link href="/auth/forgot-password" className="text-sm text-muted-foreground hover:text-primary">
+                  비밀번호를 잊으셨나요?
+                </Link>
+              </div>
             </div>
           </CardContent>
           <CardFooter className="flex flex-col space-y-4">

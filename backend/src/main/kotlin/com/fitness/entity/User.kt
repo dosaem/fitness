@@ -19,7 +19,7 @@ data class User(
     val email: String,
 
     @Column(nullable = false)
-    val password: String,
+    var password: String,
 
     @Column(nullable = false)
     var nickname: String,

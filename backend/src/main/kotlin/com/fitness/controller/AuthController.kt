@@ -35,4 +35,18 @@ class AuthController(
         val response = authService.refreshToken(request)
         return ResponseEntity.ok(response)
     }
+
+    @PostMapping("/forgot-password")
+    @Operation(summary = "비밀번호 찾기")
+    fun forgotPassword(@Valid @RequestBody request: ForgotPasswordRequest): ResponseEntity<MessageResponse> {
+        val response = authService.forgotPassword(request)
+        return ResponseEntity.ok(response)
+    }
+
+    @PostMapping("/reset-password")
+    @Operation(summary = "비밀번호 재설정")
+    fun resetPassword(@Valid @RequestBody request: ResetPasswordRequest): ResponseEntity<MessageResponse> {
+        val response = authService.resetPassword(request)
+        return ResponseEntity.ok(response)
+    }
 }

@@ -1,5 +1,5 @@
 import { apiClient } from './client';
-import { AuthResponse, LoginRequest, RegisterRequest } from '@/types';
+import { AuthResponse, LoginRequest, RegisterRequest, ForgotPasswordRequest, ResetPasswordRequest, MessageResponse } from '@/types';
 
 export const authApi = {
   login: async (data: LoginRequest): Promise<AuthResponse> => {
@@ -14,6 +14,14 @@ export const authApi = {
     apiClient.setAccessToken(response.accessToken);
     apiClient.setRefreshToken(response.refreshToken);
     return response;
+  },
+
+  forgotPassword: async (data: ForgotPasswordRequest): Promise<MessageResponse> => {
+    return apiClient.post<MessageResponse>('/api/auth/forgot-password', data);
+  },
+
+  resetPassword: async (data: ResetPasswordRequest): Promise<MessageResponse> => {
+    return apiClient.post<MessageResponse>('/api/auth/reset-password', data);
   },
 
   logout: () => {

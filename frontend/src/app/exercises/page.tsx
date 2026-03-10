@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import Link from "next/link";
-import Image from "next/image";
 import { Search, Dumbbell } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -145,12 +144,10 @@ export default function ExercisesPage() {
                 <Card className="hover:shadow-md transition-shadow cursor-pointer h-full overflow-hidden">
                   <div className="relative h-48 bg-muted">
                     {exercise.primaryImageUrl ? (
-                      <Image
+                      <img
                         src={exercise.primaryImageUrl}
                         alt={exercise.nameKo}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className="w-full h-full object-cover"
                       />
                     ) : (
                       <div className="flex items-center justify-center h-full">
